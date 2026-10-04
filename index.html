@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animation & Transition in PowerPoint</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Inter,Arial,sans-serif;background:#080b16;color:#fff;overflow:hidden}
+.deck{height:100vh;position:relative}
+.slide{position:absolute;inset:0;display:none;padding:7vh 9vw 12vh;overflow:auto;background:radial-gradient(circle at 85% 15%,#4930a844,transparent 35%),linear-gradient(135deg,#090d1c,#111936)}
+.slide.active{display:flex;flex-direction:column;justify-content:center;animation:enter .55s ease}
+@keyframes enter{from{opacity:0;transform:translateX(35px) scale(.98)}to{opacity:1;transform:none}}
+.eyebrow{color:#8ea2ff;text-transform:uppercase;letter-spacing:3px;font-weight:700;font-size:.8rem}
+h1{font-size:clamp(2.8rem,7vw,6.8rem);line-height:.95;margin:16px 0 24px;max-width:1000px}
+h2{font-size:clamp(2.2rem,5vw,4.6rem);margin:0 0 25px}
+h3{font-size:1.4rem;margin:0 0 10px;color:#cfd7ff}
+p,li{font-size:clamp(1rem,1.6vw,1.35rem);line-height:1.65;color:#c5cbe0}
+.accent{color:#9daeff}.sub{max-width:850px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:1050px}
+.card{padding:25px;border:1px solid #ffffff18;background:#ffffff0b;border-radius:20px;backdrop-filter:blur(10px);box-shadow:0 15px 40px #0003}
+.icon{font-size:2.3rem;margin-bottom:12px}.pill{display:inline-block;padding:8px 13px;border-radius:999px;background:#7284ff22;color:#aab7ff;margin:5px 5px 0 0;font-weight:600}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:950px}.compare>div{padding:25px;border:1px solid #ffffff18}.compare>div:first-child{border-radius:18px 0 0 18px}.compare>div:last-child{border-radius:0 18px 18px 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;max-width:1100px}.step{padding:20px;border-radius:18px;background:#ffffff0b;border:1px solid #ffffff12}.num{font-size:2rem;color:#91a1ff;font-weight:800}
+.controls{position:fixed;bottom:22px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:12px;z-index:5}
+button{border:1px solid #ffffff22;background:#ffffff12;color:white;padding:11px 18px;border-radius:999px;cursor:pointer;font-weight:700}
+button:hover{background:#ffffff22}.progress{position:fixed;left:0;top:0;height:4px;background:#8ea2ff;z-index:6;transition:.3s;width:10%}
+.counter{position:fixed;right:25px;bottom:25px;color:#8f98b4;font-size:.9rem}
+@media(max-width:700px){.grid,.compare,.steps{grid-template-columns:1fr}.compare>div:first-child,.compare>div:last-child{border-radius:18px}.slide{padding:9vh 7vw 14vh}.controls{bottom:14px}h1{font-size:3rem}}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<section class="slide active">
+  <div class="eyebrow">PowerPoint Presentation</div>
+  <h1>Animation <span class="accent">&</span> Transition</h1>
+  <p class="sub">Make presentations more engaging, clear, and professional with movement and slide effects.</p>
+  <div style="margin-top:20px"><span class="pill">Animations</span><span class="pill">Transitions</span><span class="pill">Presentation Skills</span></div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">01 · Introduction</div><h2>Why use movement?</h2>
+  <div class="grid">
+    <div class="card"><div class="icon">🎯</div><h3>Focus attention</h3><p>Reveal important information at the right moment instead of showing everything at once.</p></div>
+    <div class="card"><div class="icon">✨</div><h3>Improve engagement</h3><p>Simple effects can make a presentation feel dynamic and easier to follow.</p></div>
+    <div class="card"><div class="icon">🧭</div><h3>Guide the audience</h3><p>Use motion to show sequence, relationships, and the flow of an idea.</p></div>
+    <div class="card"><div class="icon">⚖️</div><h3>Use effects wisely</h3><p>Too many effects can distract from your message. Keep movement purposeful.</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">02 · Animation</div><h2>What is an <span class="accent">Animation</span>?</h2>
+  <p class="sub">An animation is an effect applied to an object <b>inside a slide</b>—such as text, a picture, shape, chart, or icon.</p>
+  <div class="grid" style="margin-top:20px">
+    <div class="card"><h3>Entrance</h3><p>Brings an object onto the slide.</p><span class="pill">Appear</span><span class="pill">Fade</span><span class="pill">Fly In</span></div>
+    <div class="card"><h3>Emphasis</h3><p>Draws attention to an object already visible.</p><span class="pill">Pulse</span><span class="pill">Spin</span><span class="pill">Grow/Shrink</span></div>
+    <div class="card"><h3>Exit</h3><p>Removes an object from the slide.</p><span class="pill">Disappear</span><span class="pill">Fade</span><span class="pill">Fly Out</span></div>
+    <div class="card"><h3>Motion Path</h3><p>Moves an object along a chosen path.</p><span class="pill">Lines</span><span class="pill">Arcs</span><span class="pill">Custom Path</span></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">03 · Transition</div><h2>What is a <span class="accent">Transition</span>?</h2>
+  <p class="sub">A transition is the visual effect that happens when you move <b>from one slide to another</b>.</p>
+  <div class="grid" style="margin-top:25px">
+    <div class="card"><h3>Fade</h3><p>Smooth and professional for most topics.</p></div>
+    <div class="card"><h3>Push</h3><p>Moves the new slide into view.</p></div>
+    <div class="card"><h3>Wipe</h3><p>Reveals the next slide in a direction.</p></div>
+    <div class="card"><h3>Morph</h3><p>Creates a smooth transformation between matching objects on slides.</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">04 · Compare</div><h2>Animation vs. Transition</h2>
+  <div class="compare">
+    <div><h3>🎬 Animation</h3><p><b>Works on:</b> objects within a slide.</p><p><b>Example:</b> A title fades in or a diagram moves.</p></div>
+    <div><h3>🖥️ Transition</h3><p><b>Works on:</b> the change between slides.</p><p><b>Example:</b> Slide 2 fades in after Slide 1.</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">05 · How to apply</div><h2>Create an effect in <span class="accent">PowerPoint</span></h2>
+  <div class="steps">
+    <div class="step"><div class="num">01</div><h3>Select</h3><p>Choose the object or slide you want to affect.</p></div>
+    <div class="step"><div class="num">02</div><h3>Choose</h3><p>Open <b>Animations</b> or <b>Transitions</b> and pick an effect.</p></div>
+    <div class="step"><div class="num">03</div><h3>Adjust</h3><p>Set duration, direction, delay, and start options.</p></div>
+    <div class="step"><div class="num">04</div><h3>Preview</h3><p>Test the result and remove anything distracting.</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">06 · Best practices</div><h2>Tips for a <span class="accent">professional</span> presentation</h2>
+  <div class="grid">
+    <div class="card"><h3>Keep it consistent</h3><p>Use a small set of effects instead of a different animation on every object.</p></div>
+    <div class="card"><h3>Keep it short</h3><p>Long effects slow down the presentation. Use timing that supports your speaking pace.</p></div>
+    <div class="card"><h3>Animate with purpose</h3><p>Ask: “Does this effect help the audience understand something?”</p></div>
+    <div class="card"><h3>Practice</h3><p>Run the presentation before presenting so timing feels natural.</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">07 · Conclusion</div>
+  <h2>Move the audience, not just the objects.</h2>
+  <p class="sub">Animations control how objects appear and behave. Transitions control how slides change. Used thoughtfully, both can make your PowerPoint clearer, smoother, and more memorable.</p>
+  <div style="margin-top:25px"><span class="pill">Simple</span><span class="pill">Purposeful</span><span class="pill">Professional</span></div>
+</section>
+
+<div class="progress" id="progress"></div>
+<div class="counter" id="counter">1 / 8</div>
+<div class="controls">
+  <button onclick="prev()">← Previous</button>
+  <button onclick="next()">Next →</button>
+</div>
+</div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let i=0;
+function show(n){i=(n+slides.length)%slides.length;slides.forEach((s,k)=>s.classList.toggle('active',k===i));document.getElementById('counter').textContent=`${i+1} / ${slides.length}`;document.getElementById('progress').style.width=((i+1)/slides.length*100)+'%'}
+function next(){show(i+1)} function prev(){show(i-1)}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();next()}if(e.key==='ArrowLeft')prev()});
+let touchX=null;document.addEventListener('touchstart',e=>touchX=e.changedTouches[0].screenX);document.addEventListener('touchend',e=>{if(touchX===null)return;let d=e.changedTouches[0].screenX-touchX;if(Math.abs(d)>50)d<0?next():prev();touchX=null});
+</script>
+</body>
+</html>
